@@ -1,0 +1,601 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{a3562606-354d-46f0-8f03-2dea835dea0d}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>blend2d</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <SpectreMitigation>false</SpectreMitigation>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <SpectreMitigation>false</SpectreMitigation>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <SpectreMitigation>false</SpectreMitigation>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <SpectreMitigation>false</SpectreMitigation>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(ProjectDir)bin\$(PlatformTarget)-$(Configuration)\</OutDir>
+    <IntDir>$(ProjectDir)obj\$(PlatformTarget)-$(Configuration)\</IntDir>
+    <TargetName>$(ProjectName)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(ProjectDir)bin\$(PlatformTarget)-$(Configuration)\</OutDir>
+    <IntDir>$(ProjectDir)obj\$(PlatformTarget)-$(Configuration)\</IntDir>
+    <TargetName>$(ProjectName)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(ProjectDir)bin\$(PlatformTarget)-$(Configuration)\</OutDir>
+    <IntDir>$(ProjectDir)obj\$(PlatformTarget)-$(Configuration)\</IntDir>
+    <TargetName>$(ProjectName)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(ProjectDir)bin\$(PlatformTarget)-$(Configuration)\</OutDir>
+    <IntDir>$(ProjectDir)obj\$(PlatformTarget)-$(Configuration)\</IntDir>
+    <TargetName>$(ProjectName)</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <ObjectFileName>$(IntDir)/%(RelativeDir)/</ObjectFileName>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>ASMJIT_STATIC;_CRT_SECURE_NO_WARNINGS;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>./src/3rdparty/asmjit/src;</AdditionalIncludeDirectories>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <ExceptionHandling>false</ExceptionHandling>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <AdditionalLibraryDirectories>
+      </AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <ObjectFileName>$(IntDir)/%(RelativeDir)/</ObjectFileName>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>ASMJIT_STATIC;WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>./src/3rdparty/asmjit/src;</AdditionalIncludeDirectories>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <ExceptionHandling>false</ExceptionHandling>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <AdditionalLibraryDirectories>
+      </AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <ObjectFileName>$(IntDir)/%(RelativeDir)/</ObjectFileName>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>ASMJIT_STATIC;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>./src/3rdparty/asmjit/src;</AdditionalIncludeDirectories>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <ExceptionHandling>false</ExceptionHandling>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <AdditionalLibraryDirectories>
+      </AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <ObjectFileName>$(IntDir)/%(RelativeDir)/</ObjectFileName>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>ASMJIT_STATIC;_CRT_SECURE_NO_WARNINGS;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>./src/3rdparty/asmjit/src;</AdditionalIncludeDirectories>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <ExceptionHandling>false</ExceptionHandling>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <AdditionalLibraryDirectories>
+      </AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\3rdparty\asmjit\src\asmjit\core\arch.cpp" />
+    <ClCompile Include="src\3rdparty\asmjit\src\asmjit\core\assembler.cpp" />
+    <ClCompile Include="src\3rdparty\asmjit\src\asmjit\core\builder.cpp" />
+    <ClCompile Include="src\3rdparty\asmjit\src\asmjit\core\callconv.cpp" />
+    <ClCompile Include="src\3rdparty\asmjit\src\asmjit\core\codeholder.cpp" />
+    <ClCompile Include="src\3rdparty\asmjit\src\asmjit\core\compiler.cpp" />
+    <ClCompile Include="src\3rdparty\asmjit\src\asmjit\core\constpool.cpp" />
+    <ClCompile Include="src\3rdparty\asmjit\src\asmjit\core\cpuinfo.cpp" />
+    <ClCompile Include="src\3rdparty\asmjit\src\asmjit\core\emitter.cpp" />
+    <ClCompile Include="src\3rdparty\asmjit\src\asmjit\core\emitterutils.cpp" />
+    <ClCompile Include="src\3rdparty\asmjit\src\asmjit\core\environment.cpp" />
+    <ClCompile Include="src\3rdparty\asmjit\src\asmjit\core\errorhandler.cpp" />
+    <ClCompile Include="src\3rdparty\asmjit\src\asmjit\core\formatter.cpp" />
+    <ClCompile Include="src\3rdparty\asmjit\src\asmjit\core\func.cpp" />
+    <ClCompile Include="src\3rdparty\asmjit\src\asmjit\core\globals.cpp" />
+    <ClCompile Include="src\3rdparty\asmjit\src\asmjit\core\inst.cpp" />
+    <ClCompile Include="src\3rdparty\asmjit\src\asmjit\core\jitallocator.cpp" />
+    <ClCompile Include="src\3rdparty\asmjit\src\asmjit\core\jitruntime.cpp" />
+    <ClCompile Include="src\3rdparty\asmjit\src\asmjit\core\logger.cpp" />
+    <ClCompile Include="src\3rdparty\asmjit\src\asmjit\core\operand.cpp" />
+    <ClCompile Include="src\3rdparty\asmjit\src\asmjit\core\osutils.cpp" />
+    <ClCompile Include="src\3rdparty\asmjit\src\asmjit\core\ralocal.cpp" />
+    <ClCompile Include="src\3rdparty\asmjit\src\asmjit\core\rapass.cpp" />
+    <ClCompile Include="src\3rdparty\asmjit\src\asmjit\core\rastack.cpp" />
+    <ClCompile Include="src\3rdparty\asmjit\src\asmjit\core\string.cpp" />
+    <ClCompile Include="src\3rdparty\asmjit\src\asmjit\core\support.cpp" />
+    <ClCompile Include="src\3rdparty\asmjit\src\asmjit\core\target.cpp" />
+    <ClCompile Include="src\3rdparty\asmjit\src\asmjit\core\type.cpp" />
+    <ClCompile Include="src\3rdparty\asmjit\src\asmjit\core\virtmem.cpp" />
+    <ClCompile Include="src\3rdparty\asmjit\src\asmjit\core\zone.cpp" />
+    <ClCompile Include="src\3rdparty\asmjit\src\asmjit\core\zonehash.cpp" />
+    <ClCompile Include="src\3rdparty\asmjit\src\asmjit\core\zonelist.cpp" />
+    <ClCompile Include="src\3rdparty\asmjit\src\asmjit\core\zonestack.cpp" />
+    <ClCompile Include="src\3rdparty\asmjit\src\asmjit\core\zonetree.cpp" />
+    <ClCompile Include="src\3rdparty\asmjit\src\asmjit\core\zonevector.cpp" />
+    <ClCompile Include="src\3rdparty\asmjit\src\asmjit\x86\x86archdata.cpp" />
+    <ClCompile Include="src\3rdparty\asmjit\src\asmjit\x86\x86assembler.cpp" />
+    <ClCompile Include="src\3rdparty\asmjit\src\asmjit\x86\x86builder.cpp" />
+    <ClCompile Include="src\3rdparty\asmjit\src\asmjit\x86\x86callconv.cpp" />
+    <ClCompile Include="src\3rdparty\asmjit\src\asmjit\x86\x86compiler.cpp" />
+    <ClCompile Include="src\3rdparty\asmjit\src\asmjit\x86\x86features.cpp" />
+    <ClCompile Include="src\3rdparty\asmjit\src\asmjit\x86\x86formatter.cpp" />
+    <ClCompile Include="src\3rdparty\asmjit\src\asmjit\x86\x86instapi.cpp" />
+    <ClCompile Include="src\3rdparty\asmjit\src\asmjit\x86\x86instdb.cpp" />
+    <ClCompile Include="src\3rdparty\asmjit\src\asmjit\x86\x86internal.cpp" />
+    <ClCompile Include="src\3rdparty\asmjit\src\asmjit\x86\x86operand.cpp" />
+    <ClCompile Include="src\3rdparty\asmjit\src\asmjit\x86\x86rapass.cpp" />
+    <ClCompile Include="src\src\blend2d\api-nocxx.cpp" />
+    <ClCompile Include="src\src\blend2d\array.cpp" />
+    <ClCompile Include="src\src\blend2d\arrayops.cpp" />
+    <ClCompile Include="src\src\blend2d\bitarray.cpp" />
+    <ClCompile Include="src\src\blend2d\bitops.cpp" />
+    <ClCompile Include="src\src\blend2d\codec\bmpcodec.cpp" />
+    <ClCompile Include="src\src\blend2d\codec\deflate.cpp" />
+    <ClCompile Include="src\src\blend2d\codec\jpegcodec.cpp" />
+    <ClCompile Include="src\src\blend2d\codec\jpeghuffman.cpp" />
+    <ClCompile Include="src\src\blend2d\codec\jpegops.cpp" />
+    <ClCompile Include="src\src\blend2d\codec\jpegops_sse2.cpp">
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+    </ClCompile>
+    <ClCompile Include="src\src\blend2d\codec\pngcodec.cpp" />
+    <ClCompile Include="src\src\blend2d\codec\pngops.cpp" />
+    <ClCompile Include="src\src\blend2d\codec\pngops_sse2.cpp">
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+    </ClCompile>
+    <ClCompile Include="src\src\blend2d\compop.cpp" />
+    <ClCompile Include="src\src\blend2d\context.cpp" />
+    <ClCompile Include="src\src\blend2d\filesystem.cpp" />
+    <ClCompile Include="src\src\blend2d\fixedpipe\fixedpiperuntime.cpp" />
+    <ClCompile Include="src\src\blend2d\font.cpp" />
+    <ClCompile Include="src\src\blend2d\fontmanager.cpp" />
+    <ClCompile Include="src\src\blend2d\format.cpp" />
+    <ClCompile Include="src\src\blend2d\geometry.cpp" />
+    <ClCompile Include="src\src\blend2d\glyphbuffer.cpp" />
+    <ClCompile Include="src\src\blend2d\gradient.cpp" />
+    <ClCompile Include="src\src\blend2d\gradient_avx2.cpp">
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
+    </ClCompile>
+    <ClCompile Include="src\src\blend2d\gradient_sse2.cpp">
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+    </ClCompile>
+    <ClCompile Include="src\src\blend2d\image.cpp" />
+    <ClCompile Include="src\src\blend2d\imagecodec.cpp" />
+    <ClCompile Include="src\src\blend2d\imagescale.cpp" />
+    <ClCompile Include="src\src\blend2d\math.cpp" />
+    <ClCompile Include="src\src\blend2d\matrix.cpp" />
+    <ClCompile Include="src\src\blend2d\matrix_avx.cpp">
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AdvancedVectorExtensions</EnableEnhancedInstructionSet>
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AdvancedVectorExtensions</EnableEnhancedInstructionSet>
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">AdvancedVectorExtensions</EnableEnhancedInstructionSet>
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">AdvancedVectorExtensions</EnableEnhancedInstructionSet>
+    </ClCompile>
+    <ClCompile Include="src\src\blend2d\matrix_sse2.cpp">
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+    </ClCompile>
+    <ClCompile Include="src\src\blend2d\opentype\otcff.cpp" />
+    <ClCompile Include="src\src\blend2d\opentype\otcmap.cpp" />
+    <ClCompile Include="src\src\blend2d\opentype\otcore.cpp" />
+    <ClCompile Include="src\src\blend2d\opentype\otface.cpp" />
+    <ClCompile Include="src\src\blend2d\opentype\otglyf.cpp" />
+    <ClCompile Include="src\src\blend2d\opentype\otkern.cpp" />
+    <ClCompile Include="src\src\blend2d\opentype\otlayout.cpp" />
+    <ClCompile Include="src\src\blend2d\opentype\otmetrics.cpp" />
+    <ClCompile Include="src\src\blend2d\opentype\otname.cpp" />
+    <ClCompile Include="src\src\blend2d\path.cpp" />
+    <ClCompile Include="src\src\blend2d\pathstroke.cpp" />
+    <ClCompile Include="src\src\blend2d\pattern.cpp" />
+    <ClCompile Include="src\src\blend2d\pipedefs.cpp" />
+    <ClCompile Include="src\src\blend2d\pipegen\compoppart.cpp" />
+    <ClCompile Include="src\src\blend2d\pipegen\fetchgradientpart.cpp" />
+    <ClCompile Include="src\src\blend2d\pipegen\fetchpart.cpp" />
+    <ClCompile Include="src\src\blend2d\pipegen\fetchpatternpart.cpp" />
+    <ClCompile Include="src\src\blend2d\pipegen\fetchpixelptrpart.cpp" />
+    <ClCompile Include="src\src\blend2d\pipegen\fetchsolidpart.cpp" />
+    <ClCompile Include="src\src\blend2d\pipegen\fetchutils.cpp" />
+    <ClCompile Include="src\src\blend2d\pipegen\fillpart.cpp" />
+    <ClCompile Include="src\src\blend2d\pipegen\pipecompiler.cpp" />
+    <ClCompile Include="src\src\blend2d\pipegen\pipegencore.cpp" />
+    <ClCompile Include="src\src\blend2d\pipegen\pipegenruntime.cpp" />
+    <ClCompile Include="src\src\blend2d\pipegen\pipepart.cpp" />
+    <ClCompile Include="src\src\blend2d\piperuntime.cpp" />
+    <ClCompile Include="src\src\blend2d\pixelconverter.cpp" />
+    <ClCompile Include="src\src\blend2d\pixelconverter_avx2.cpp">
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
+    </ClCompile>
+    <ClCompile Include="src\src\blend2d\pixelconverter_sse2.cpp">
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+    </ClCompile>
+    <ClCompile Include="src\src\blend2d\pixelconverter_ssse3.cpp">
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+    </ClCompile>
+    <ClCompile Include="src\src\blend2d\pixelops.cpp" />
+    <ClCompile Include="src\src\blend2d\random.cpp" />
+    <ClCompile Include="src\src\blend2d\raster\analyticrasterizer.cpp" />
+    <ClCompile Include="src\src\blend2d\raster\rastercontext.cpp" />
+    <ClCompile Include="src\src\blend2d\raster\rastercontextops.cpp" />
+    <ClCompile Include="src\src\blend2d\raster\rasterfetchdata.cpp" />
+    <ClCompile Include="src\src\blend2d\raster\rasterworkdata.cpp" />
+    <ClCompile Include="src\src\blend2d\raster\rasterworkermanager.cpp" />
+    <ClCompile Include="src\src\blend2d\raster\rasterworkproc.cpp" />
+    <ClCompile Include="src\src\blend2d\raster\rasterworksynchronization.cpp" />
+    <ClCompile Include="src\src\blend2d\region.cpp" />
+    <ClCompile Include="src\src\blend2d\rgba.cpp" />
+    <ClCompile Include="src\src\blend2d\runtime.cpp" />
+    <ClCompile Include="src\src\blend2d\scopedallocator.cpp" />
+    <ClCompile Include="src\src\blend2d\string.cpp" />
+    <ClCompile Include="src\src\blend2d\style.cpp" />
+    <ClCompile Include="src\src\blend2d\support.cpp" />
+    <ClCompile Include="src\src\blend2d\tables.cpp" />
+    <ClCompile Include="src\src\blend2d\threading\thread.cpp" />
+    <ClCompile Include="src\src\blend2d\threading\threadpool.cpp" />
+    <ClCompile Include="src\src\blend2d\threading\uniqueidgenerator.cpp" />
+    <ClCompile Include="src\src\blend2d\trace.cpp" />
+    <ClCompile Include="src\src\blend2d\unicode.cpp" />
+    <ClCompile Include="src\src\blend2d\variant.cpp" />
+    <ClCompile Include="src\src\blend2d\zeroallocator.cpp" />
+    <ClCompile Include="src\src\blend2d\zoneallocator.cpp" />
+    <ClCompile Include="src\src\blend2d\zonehash.cpp" />
+    <ClCompile Include="src\src\blend2d\zonelist.cpp" />
+    <ClCompile Include="src\src\blend2d\zonetree.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\3rdparty\asmjit\src\asmjit\asmjit.h" />
+    <ClInclude Include="src\3rdparty\asmjit\src\asmjit\core.h" />
+    <ClInclude Include="src\3rdparty\asmjit\src\asmjit\core\api-build_p.h" />
+    <ClInclude Include="src\3rdparty\asmjit\src\asmjit\core\api-config.h" />
+    <ClInclude Include="src\3rdparty\asmjit\src\asmjit\core\arch.h" />
+    <ClInclude Include="src\3rdparty\asmjit\src\asmjit\core\assembler.h" />
+    <ClInclude Include="src\3rdparty\asmjit\src\asmjit\core\builder.h" />
+    <ClInclude Include="src\3rdparty\asmjit\src\asmjit\core\callconv.h" />
+    <ClInclude Include="src\3rdparty\asmjit\src\asmjit\core\codebuffer.h" />
+    <ClInclude Include="src\3rdparty\asmjit\src\asmjit\core\codebufferwriter_p.h" />
+    <ClInclude Include="src\3rdparty\asmjit\src\asmjit\core\codeholder.h" />
+    <ClInclude Include="src\3rdparty\asmjit\src\asmjit\core\compiler.h" />
+    <ClInclude Include="src\3rdparty\asmjit\src\asmjit\core\constpool.h" />
+    <ClInclude Include="src\3rdparty\asmjit\src\asmjit\core\cpuinfo.h" />
+    <ClInclude Include="src\3rdparty\asmjit\src\asmjit\core\datatypes.h" />
+    <ClInclude Include="src\3rdparty\asmjit\src\asmjit\core\emitter.h" />
+    <ClInclude Include="src\3rdparty\asmjit\src\asmjit\core\emitterutils_p.h" />
+    <ClInclude Include="src\3rdparty\asmjit\src\asmjit\core\environment.h" />
+    <ClInclude Include="src\3rdparty\asmjit\src\asmjit\core\errorhandler.h" />
+    <ClInclude Include="src\3rdparty\asmjit\src\asmjit\core\features.h" />
+    <ClInclude Include="src\3rdparty\asmjit\src\asmjit\core\formatter.h" />
+    <ClInclude Include="src\3rdparty\asmjit\src\asmjit\core\func.h" />
+    <ClInclude Include="src\3rdparty\asmjit\src\asmjit\core\globals.h" />
+    <ClInclude Include="src\3rdparty\asmjit\src\asmjit\core\inst.h" />
+    <ClInclude Include="src\3rdparty\asmjit\src\asmjit\core\jitallocator.h" />
+    <ClInclude Include="src\3rdparty\asmjit\src\asmjit\core\jitruntime.h" />
+    <ClInclude Include="src\3rdparty\asmjit\src\asmjit\core\logger.h" />
+    <ClInclude Include="src\3rdparty\asmjit\src\asmjit\core\misc_p.h" />
+    <ClInclude Include="src\3rdparty\asmjit\src\asmjit\core\operand.h" />
+    <ClInclude Include="src\3rdparty\asmjit\src\asmjit\core\osutils.h" />
+    <ClInclude Include="src\3rdparty\asmjit\src\asmjit\core\osutils_p.h" />
+    <ClInclude Include="src\3rdparty\asmjit\src\asmjit\core\raassignment_p.h" />
+    <ClInclude Include="src\3rdparty\asmjit\src\asmjit\core\rabuilders_p.h" />
+    <ClInclude Include="src\3rdparty\asmjit\src\asmjit\core\radefs_p.h" />
+    <ClInclude Include="src\3rdparty\asmjit\src\asmjit\core\ralocal_p.h" />
+    <ClInclude Include="src\3rdparty\asmjit\src\asmjit\core\rapass_p.h" />
+    <ClInclude Include="src\3rdparty\asmjit\src\asmjit\core\rastack_p.h" />
+    <ClInclude Include="src\3rdparty\asmjit\src\asmjit\core\string.h" />
+    <ClInclude Include="src\3rdparty\asmjit\src\asmjit\core\support.h" />
+    <ClInclude Include="src\3rdparty\asmjit\src\asmjit\core\target.h" />
+    <ClInclude Include="src\3rdparty\asmjit\src\asmjit\core\type.h" />
+    <ClInclude Include="src\3rdparty\asmjit\src\asmjit\core\virtmem.h" />
+    <ClInclude Include="src\3rdparty\asmjit\src\asmjit\core\zone.h" />
+    <ClInclude Include="src\3rdparty\asmjit\src\asmjit\core\zonehash.h" />
+    <ClInclude Include="src\3rdparty\asmjit\src\asmjit\core\zonelist.h" />
+    <ClInclude Include="src\3rdparty\asmjit\src\asmjit\core\zonestack.h" />
+    <ClInclude Include="src\3rdparty\asmjit\src\asmjit\core\zonestring.h" />
+    <ClInclude Include="src\3rdparty\asmjit\src\asmjit\core\zonetree.h" />
+    <ClInclude Include="src\3rdparty\asmjit\src\asmjit\core\zonevector.h" />
+    <ClInclude Include="src\3rdparty\asmjit\src\asmjit\x86.h" />
+    <ClInclude Include="src\3rdparty\asmjit\src\asmjit\x86\x86archdata_p.h" />
+    <ClInclude Include="src\3rdparty\asmjit\src\asmjit\x86\x86assembler.h" />
+    <ClInclude Include="src\3rdparty\asmjit\src\asmjit\x86\x86builder.h" />
+    <ClInclude Include="src\3rdparty\asmjit\src\asmjit\x86\x86callconv_p.h" />
+    <ClInclude Include="src\3rdparty\asmjit\src\asmjit\x86\x86compiler.h" />
+    <ClInclude Include="src\3rdparty\asmjit\src\asmjit\x86\x86emitter.h" />
+    <ClInclude Include="src\3rdparty\asmjit\src\asmjit\x86\x86features.h" />
+    <ClInclude Include="src\3rdparty\asmjit\src\asmjit\x86\x86formatter_p.h" />
+    <ClInclude Include="src\3rdparty\asmjit\src\asmjit\x86\x86globals.h" />
+    <ClInclude Include="src\3rdparty\asmjit\src\asmjit\x86\x86instapi_p.h" />
+    <ClInclude Include="src\3rdparty\asmjit\src\asmjit\x86\x86instdb.h" />
+    <ClInclude Include="src\3rdparty\asmjit\src\asmjit\x86\x86instdb_p.h" />
+    <ClInclude Include="src\3rdparty\asmjit\src\asmjit\x86\x86internal_p.h" />
+    <ClInclude Include="src\3rdparty\asmjit\src\asmjit\x86\x86opcode_p.h" />
+    <ClInclude Include="src\3rdparty\asmjit\src\asmjit\x86\x86operand.h" />
+    <ClInclude Include="src\3rdparty\asmjit\src\asmjit\x86\x86rapass_p.h" />
+    <ClInclude Include="src\src\blend2d-debug.h" />
+    <ClInclude Include="src\src\blend2d-impl.h" />
+    <ClInclude Include="src\src\blend2d.h" />
+    <ClInclude Include="src\src\blend2d\api-build_p.h" />
+    <ClInclude Include="src\src\blend2d\api-impl.h" />
+    <ClInclude Include="src\src\blend2d\api-internal_p.h" />
+    <ClInclude Include="src\src\blend2d\api.h" />
+    <ClInclude Include="src\src\blend2d\array.h" />
+    <ClInclude Include="src\src\blend2d\arrayops_p.h" />
+    <ClInclude Include="src\src\blend2d\array_p.h" />
+    <ClInclude Include="src\src\blend2d\bitarray.h" />
+    <ClInclude Include="src\src\blend2d\bitarray_p.h" />
+    <ClInclude Include="src\src\blend2d\bitops_p.h" />
+    <ClInclude Include="src\src\blend2d\codec\bmpcodec_p.h" />
+    <ClInclude Include="src\src\blend2d\codec\deflate_p.h" />
+    <ClInclude Include="src\src\blend2d\codec\jpegcodec_p.h" />
+    <ClInclude Include="src\src\blend2d\codec\jpeghuffman_p.h" />
+    <ClInclude Include="src\src\blend2d\codec\jpegops_p.h" />
+    <ClInclude Include="src\src\blend2d\codec\pngcodec_p.h" />
+    <ClInclude Include="src\src\blend2d\codec\pngops_p.h" />
+    <ClInclude Include="src\src\blend2d\compop_p.h" />
+    <ClInclude Include="src\src\blend2d\context.h" />
+    <ClInclude Include="src\src\blend2d\context_p.h" />
+    <ClInclude Include="src\src\blend2d\filesystem.h" />
+    <ClInclude Include="src\src\blend2d\filesystem_p.h" />
+    <ClInclude Include="src\src\blend2d\fixedpipe\fixedpiperuntime_p.h" />
+    <ClInclude Include="src\src\blend2d\font.h" />
+    <ClInclude Include="src\src\blend2d\fontdefs.h" />
+    <ClInclude Include="src\src\blend2d\fontmanager.h" />
+    <ClInclude Include="src\src\blend2d\fontmanager_p.h" />
+    <ClInclude Include="src\src\blend2d\font_p.h" />
+    <ClInclude Include="src\src\blend2d\format.h" />
+    <ClInclude Include="src\src\blend2d\format_p.h" />
+    <ClInclude Include="src\src\blend2d\geometry.h" />
+    <ClInclude Include="src\src\blend2d\geometry_p.h" />
+    <ClInclude Include="src\src\blend2d\glyphbuffer.h" />
+    <ClInclude Include="src\src\blend2d\glyphbuffer_p.h" />
+    <ClInclude Include="src\src\blend2d\gradient.h" />
+    <ClInclude Include="src\src\blend2d\gradient_p.h" />
+    <ClInclude Include="src\src\blend2d\image.h" />
+    <ClInclude Include="src\src\blend2d\imagecodec.h" />
+    <ClInclude Include="src\src\blend2d\imagescale_p.h" />
+    <ClInclude Include="src\src\blend2d\image_p.h" />
+    <ClInclude Include="src\src\blend2d\lookuptable_p.h" />
+    <ClInclude Include="src\src\blend2d\math_p.h" />
+    <ClInclude Include="src\src\blend2d\matrix.h" />
+    <ClInclude Include="src\src\blend2d\matrix_p.h" />
+    <ClInclude Include="src\src\blend2d\opentype\otcff_p.h" />
+    <ClInclude Include="src\src\blend2d\opentype\otcmap_p.h" />
+    <ClInclude Include="src\src\blend2d\opentype\otcore_p.h" />
+    <ClInclude Include="src\src\blend2d\opentype\otdefs_p.h" />
+    <ClInclude Include="src\src\blend2d\opentype\otface_p.h" />
+    <ClInclude Include="src\src\blend2d\opentype\otglyf_p.h" />
+    <ClInclude Include="src\src\blend2d\opentype\otkern_p.h" />
+    <ClInclude Include="src\src\blend2d\opentype\otlayout_p.h" />
+    <ClInclude Include="src\src\blend2d\opentype\otmetrics_p.h" />
+    <ClInclude Include="src\src\blend2d\opentype\otname_p.h" />
+    <ClInclude Include="src\src\blend2d\opentype\otplatform_p.h" />
+    <ClInclude Include="src\src\blend2d\path.h" />
+    <ClInclude Include="src\src\blend2d\pathstroke_p.h" />
+    <ClInclude Include="src\src\blend2d\path_p.h" />
+    <ClInclude Include="src\src\blend2d\pattern.h" />
+    <ClInclude Include="src\src\blend2d\pattern_p.h" />
+    <ClInclude Include="src\src\blend2d\pipedefs_p.h" />
+    <ClInclude Include="src\src\blend2d\pipegen\compoppart_p.h" />
+    <ClInclude Include="src\src\blend2d\pipegen\fetchgradientpart_p.h" />
+    <ClInclude Include="src\src\blend2d\pipegen\fetchpart_p.h" />
+    <ClInclude Include="src\src\blend2d\pipegen\fetchpatternpart_p.h" />
+    <ClInclude Include="src\src\blend2d\pipegen\fetchpixelptrpart_p.h" />
+    <ClInclude Include="src\src\blend2d\pipegen\fetchsolidpart_p.h" />
+    <ClInclude Include="src\src\blend2d\pipegen\fetchutils_p.h" />
+    <ClInclude Include="src\src\blend2d\pipegen\fillpart_p.h" />
+    <ClInclude Include="src\src\blend2d\pipegen\pipecompiler_p.h" />
+    <ClInclude Include="src\src\blend2d\pipegen\pipedebug_p.h" />
+    <ClInclude Include="src\src\blend2d\pipegen\pipegencore_p.h" />
+    <ClInclude Include="src\src\blend2d\pipegen\pipegenruntime_p.h" />
+    <ClInclude Include="src\src\blend2d\pipegen\pipepart_p.h" />
+    <ClInclude Include="src\src\blend2d\pipegen\piperegusage_p.h" />
+    <ClInclude Include="src\src\blend2d\piperuntime_p.h" />
+    <ClInclude Include="src\src\blend2d\pixelconverter.h" />
+    <ClInclude Include="src\src\blend2d\pixelconverter_p.h" />
+    <ClInclude Include="src\src\blend2d\pixelops_p.h" />
+    <ClInclude Include="src\src\blend2d\random.h" />
+    <ClInclude Include="src\src\blend2d\random_p.h" />
+    <ClInclude Include="src\src\blend2d\raster\analyticrasterizer_p.h" />
+    <ClInclude Include="src\src\blend2d\raster\edgebuilder_p.h" />
+    <ClInclude Include="src\src\blend2d\raster\rastercommandprocasync_p.h" />
+    <ClInclude Include="src\src\blend2d\raster\rastercommandprocsync_p.h" />
+    <ClInclude Include="src\src\blend2d\raster\rastercommandserializer_p.h" />
+    <ClInclude Include="src\src\blend2d\raster\rastercommand_p.h" />
+    <ClInclude Include="src\src\blend2d\raster\rastercontextops_p.h" />
+    <ClInclude Include="src\src\blend2d\raster\rastercontextstate_p.h" />
+    <ClInclude Include="src\src\blend2d\raster\rastercontextstyle_p.h" />
+    <ClInclude Include="src\src\blend2d\raster\rastercontext_p.h" />
+    <ClInclude Include="src\src\blend2d\raster\rasterdebug_p.h" />
+    <ClInclude Include="src\src\blend2d\raster\rasterdefs_p.h" />
+    <ClInclude Include="src\src\blend2d\raster\rasterfetchdata_p.h" />
+    <ClInclude Include="src\src\blend2d\raster\rasterjobproc_p.h" />
+    <ClInclude Include="src\src\blend2d\raster\rasterjob_p.h" />
+    <ClInclude Include="src\src\blend2d\raster\rasterworkbatch_p.h" />
+    <ClInclude Include="src\src\blend2d\raster\rasterworkdata_p.h" />
+    <ClInclude Include="src\src\blend2d\raster\rasterworkermanager_p.h" />
+    <ClInclude Include="src\src\blend2d\raster\rasterworkproc_p.h" />
+    <ClInclude Include="src\src\blend2d\raster\rasterworkqueue_p.h" />
+    <ClInclude Include="src\src\blend2d\raster\rasterworksynchronization_p.h" />
+    <ClInclude Include="src\src\blend2d\region.h" />
+    <ClInclude Include="src\src\blend2d\region_p.h" />
+    <ClInclude Include="src\src\blend2d\rgba.h" />
+    <ClInclude Include="src\src\blend2d\rgba_p.h" />
+    <ClInclude Include="src\src\blend2d\runtime.h" />
+    <ClInclude Include="src\src\blend2d\runtime_p.h" />
+    <ClInclude Include="src\src\blend2d\scopedallocator_p.h" />
+    <ClInclude Include="src\src\blend2d\simd_p.h" />
+    <ClInclude Include="src\src\blend2d\simd_x86_p.h" />
+    <ClInclude Include="src\src\blend2d\string.h" />
+    <ClInclude Include="src\src\blend2d\string_p.h" />
+    <ClInclude Include="src\src\blend2d\style.h" />
+    <ClInclude Include="src\src\blend2d\style_p.h" />
+    <ClInclude Include="src\src\blend2d\support_p.h" />
+    <ClInclude Include="src\src\blend2d\tables_p.h" />
+    <ClInclude Include="src\src\blend2d\threading\atomic_p.h" />
+    <ClInclude Include="src\src\blend2d\threading\conditionvariable_p.h" />
+    <ClInclude Include="src\src\blend2d\threading\mutex_p.h" />
+    <ClInclude Include="src\src\blend2d\threading\threadpool_p.h" />
+    <ClInclude Include="src\src\blend2d\threading\thread_p.h" />
+    <ClInclude Include="src\src\blend2d\threading\uniqueidgenerator_p.h" />
+    <ClInclude Include="src\src\blend2d\trace_p.h" />
+    <ClInclude Include="src\src\blend2d\unicode_p.h" />
+    <ClInclude Include="src\src\blend2d\variant.h" />
+    <ClInclude Include="src\src\blend2d\variant_p.h" />
+    <ClInclude Include="src\src\blend2d\zeroallocator_p.h" />
+    <ClInclude Include="src\src\blend2d\zoneallocator_p.h" />
+    <ClInclude Include="src\src\blend2d\zonehash_p.h" />
+    <ClInclude Include="src\src\blend2d\zonelist_p.h" />
+    <ClInclude Include="src\src\blend2d\zonetree_p.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
